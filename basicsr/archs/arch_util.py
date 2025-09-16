@@ -4,11 +4,8 @@ import torch
 import torchvision
 import warnings
 import sys
-if sys.version_info >= (3, 12):
-    from packaging.version import Version
-    LooseVersion = Version
-else:
-    from distutils.version import LooseVersion
+from packaging.version import Version
+LooseVersion = Version
 from itertools import repeat
 from torch import nn as nn
 from torch.nn import functional as F
@@ -321,3 +318,4 @@ to_2tuple = _ntuple(2)
 to_3tuple = _ntuple(3)
 to_4tuple = _ntuple(4)
 to_ntuple = _ntuple
+
